@@ -2,7 +2,7 @@
 export const firm = {
   name: "Fretwork", wordmark: "Fretwork",
   legalName: "Fretwork Systems, LLC",
-  email: "russ@fretworksystems.com",
+  email: "fretwork@fretworksystems.com",
   kicker: "AI & Systems for Small Teams",
   bookingUrl: "#start",
 };
