@@ -7,7 +7,7 @@ export const firm = {
   bookingUrl: "#start",
 };
 export const hero = {
-  h1: "Modernize the work — without losing the people in it.",
+  h1: "Modernization does not mean fewer people. It means more independent ones.",
   subline: "Practical AI and systems for small teams. Built to serve the humans doing the work, not replace them.",
   lede: [
     "Most teams are told to \"adopt AI\" and handed either hype or a tool that steamrolls how they actually work. The manual load stays, the people feel like an afterthought, and the modernization that was promised never quite arrives.",
@@ -21,7 +21,7 @@ export const pillars = [
   { title: "Productized & fast", body: "A paid audit, then a build sprint. Clear scope, clear price, and something working at the end — not a year-long consulting engagement." },
 ];
 export const turn = "Anyone can bolt on an AI tool. The work is understanding how a team actually gets things done — and building the machinery around the people, not over them.";
-export const audiences = ["Microsoft 365","Automations","Workflows","Data & reporting","AI assistants","Ops & intake"];
+export const audiences = ["Integrations","Automations","Workflows","Data & reporting","AI assistants","Ops & intake"];
 export const why = [
   "Fretwork is a small, deliberate build shop. You work directly with the principal — the same person who scopes the audit signs off on what ships.",
   "The team is young AI talent building under real supervision, with human QA on everything. The result is modernization you can trust: the machine carries the weight, and your people keep the judgment.",
