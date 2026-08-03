@@ -129,3 +129,5 @@ h1{ font-size:clamp(37px,5.8vw,62px); }
 
 /* ── batch-3 (2026-07-31 color pivot): wordmark + all accents = one brand color ── */
 :root{ --gold:#C85A2B; --brand:#C85A2B; }
+
+:root{ --gold:#ffffff; --brand:#8B9299; } /* 2026-08-03 (Russ): silver override LAST so it wins the cascade */
