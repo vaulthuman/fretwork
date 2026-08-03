@@ -1,4 +1,7 @@
-/* ── VAULT HOUSE BRAND KIT ── pure black & white, regal, serious. No gray text. ── */
+
+
+/* 2026-08-02 (Russ): revert to pure B&W; wordmark = dark silver */
+:root{ --gold:#ffffff; --brand:#8B9299; }/* ── VAULT HOUSE BRAND KIT ── pure black & white, regal, serious. No gray text. ── */
 :root{
   --bg:#000; --ink:#fff;
   --line:rgba(255,255,255,.28);   /* hairline rules — white, faint, never gray block */
