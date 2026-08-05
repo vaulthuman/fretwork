@@ -24,11 +24,13 @@ const year = new Date().getFullYear();
   <main>
     <div class="wrap">
       <section class="hero">
-        <p class="kicker">{firm.kicker}</p>
+        <p class="kicker">{hero.badge}</p>
         <h1>{hero.h1}</h1>
         <p class="subline serif">{hero.subline}</p>
       </section>
       <div class="lede">{hero.lede.map((p) => <p>{p}</p>)}</div>
+      <p class="mech">{hero.mechanism}</p>
+      <p class="without">{hero.without}</p>
       <div class="cta"><a class="btn-fill" href={firm.bookingUrl}>{hero.cta}</a></div>
 
       <hr class="rule" />
@@ -43,6 +45,10 @@ const year = new Date().getFullYear();
 
       <hr class="rule" />
       <h2 class="sec">Why {firm.name}</h2>
+      <div class="coachcard">
+        <img src="/russ-bw.jpg" alt="Russ Michaels, principal" width="96" height="120" />
+        <div><p class="coachname">Russ Michaels</p><p class="coachrole">Principal &middot; Fretwork Systems</p></div>
+      </div>
       <div class="prose">{why.map((p) => <p>{p}</p>)}</div>
 
       <hr class="rule" />
@@ -61,16 +67,23 @@ const year = new Date().getFullYear();
       <p class="backlink">A member of the <a href="https://www.vaulthuman.com">Vault Human</a> family of companies.</p>
     </div>
   </footer>
+  <style>
+    .mech{max-width:820px;margin:26px auto 0;text-align:center;font-family:var(--serif);font-size:clamp(17px,2vw,20px);line-height:1.5;opacity:.95}
+    .without{max-width:720px;margin:14px auto 0;text-align:center;font-size:14px;letter-spacing:.02em;opacity:.72}
+    .coachcard{display:flex;align-items:center;gap:16px;margin:0 0 22px}
+    .coachcard img{width:96px;height:120px;object-fit:cover;border-radius:10px;flex:0 0 auto;filter:grayscale(1)}
+    .coachname{font-weight:600;margin:0}
+    .coachrole{opacity:.7;margin:2px 0 0;font-size:14px}
+  </style>
 <script>
 addEventListener('DOMContentLoaded',function(){
  if(!('IntersectionObserver'in window))return;
- var s='main .wrap>section:not(.hero),main .wrap>h2,main .wrap>.prose,main .wrap>.lede,main .wrap>.cta,main .wrap>.ctarow,main .wrap>.turn,main .wrap>.closing,main .wrap>.why,main .wrap>.tags,main .wrap>.markets,main .wrap>.pkgs,main .wrap>.areas,main .wrap>.steps,main .wrap>.cols,main .wrap>.pagehead';
+ var s='main .wrap>section:not(.hero),main .wrap>h2,main .wrap>.prose,main .wrap>.lede,main .wrap>.cta,main .wrap>.ctarow,main .wrap>.turn,main .wrap>.closing,main .wrap>.why,main .wrap>.tags,main .wrap>.markets,main .wrap>.pkgs,main .wrap>.areas,main .wrap>.steps,main .wrap>.cols,main .wrap>.pagehead,main .wrap>.mech,main .wrap>.without,main .wrap>.coachcard';
  var e=[].slice.call(document.querySelectorAll(s));
  e.forEach(function(x){x.classList.add('reveal')});
  var o=new IntersectionObserver(function(t){t.forEach(function(y){if(y.isIntersecting){y.target.classList.add('in');o.unobserve(y.target)}})},{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
  e.forEach(function(x){o.observe(x)});
 });
 </script>
-
 </body>
 </html>
