@@ -4,7 +4,7 @@ export const firm = {
   legalName: "Fretwork Systems, LLC",
   email: "fretwork@fretworksystems.com",
   kicker: "AI & Systems for Small Teams",
-  bookingUrl: "#start",
+  bookingUrl: "/start",
 };
 export const hero = {
   h1: "Modernization does not mean fewer people. It means more independent ones.",
