@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+import { firm, steps, footerLine } from '../data/site.js';
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Start — Fretwork</title>
+  <meta name="description" content="Book a free systems audit. Describe one workflow that's costing your team time and we'll show you the highest-leverage fixes. No obligation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site">
+    <div class="wrap bar">
+      <a class="brand" href="/">{firm.wordmark}</a>
+      <a class="navbtn" href="/">Back to site</a>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <div class="pagehead">
+        <p class="eyebrow">Book a free systems audit</p>
+        <h1>Start with a free audit.</h1>
+        <p class="dek">Describe one workflow that&rsquo;s costing your team time &mdash; we&rsquo;ll review it personally and show you the highest-leverage fixes. No obligation.</p>
+      </div>
+      <hr class="rule" />
+      <h2 class="sec">What happens next</h2>
+      <ol class="steps">{steps.map((s) => (<li><span class="rn">{s.n}</span><b>{s.title}</b> {s.body}</li>))}</ol>
+      <hr class="rule" />
+      <div class="formwrap">
+        <script is:inline src="https://js-na2.hsforms.net/forms/embed/246947446.js" defer></script>
+        <div class="hs-form-frame" data-region="na2" data-form-id="3f225ab5-5a70-46d9-a497-29e6256b1e52" data-portal-id="246947446"></div>
+      </div>
+      <p class="note">Share one workflow that&rsquo;s slowing your team down and we&rsquo;ll reply personally &mdash; usually within one business day. A real person holds it from here.</p>
+    </div>
+  </main>
+  <footer class="site">
+    <div class="wrap">
+      <p class="sig">{firm.legalName.toUpperCase()}</p>
+      <p class="meta">{footerLine} &middot; <a href={`mailto:${firm.email}`}>{firm.email}</a> &middot; &copy; {year}</p>
+      <p class="backlink">A member of the <a href="https://www.vaulthuman.com">Vault Human</a> family of companies.</p>
+    </div>
+  </footer>
+  <style>
+    .pagehead{padding:56px 0 8px;text-align:center;}
+    .pagehead h1{margin:14px 0 18px;}
+    .eyebrow{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:3px;text-transform:uppercase;}
+    .dek{max-width:680px;margin:0 auto;font-family:var(--serif);font-size:clamp(17px,2vw,20px);line-height:1.5;}
+    .formwrap{background:#0D0D0D;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:26px 22px;margin:10px 0 20px;min-height:360px;box-shadow:0 20px 40px rgba(0,0,0,.55);}
+    .note{max-width:680px;margin:12px auto 60px;text-align:center;opacity:.8;font-size:14px;}
+  </style>
+</body>
+</html>
