@@ -7,8 +7,11 @@ export const firm = {
   bookingUrl: "/start",
 };
 export const hero = {
+  badge: "For small teams already using Microsoft 365",
   h1: "Modernization does not mean fewer people. It means more independent ones.",
-  subline: "Practical AI and systems for small teams. Built to serve the humans doing the work, not replace them.",
+  subline: "Practical AI & Microsoft-365 automation for small teams — built around how your people already work, to give them back hours every week.",
+  mechanism: "We examine seven workflow points — intake, handoffs, approvals, documents, communication, reporting, and follow-up — and build only what the work requires.",
+  without: "Without replacing your team, abandoning Microsoft 365, or buying another sprawling platform.",
   lede: [
     "Most teams are told to \"adopt AI\" and handed either hype or a tool that steamrolls how they actually work. The manual load stays, the people feel like an afterthought, and the modernization that was promised never quite arrives.",
     "Fretwork builds the other thing: practical automations, workflows, and tools that take the manual weight off — with a human sign-off on everything that ships. The point isn't a flashier stack. It's people freed to do the work only they can do.",
