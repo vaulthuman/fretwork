@@ -7,11 +7,11 @@ export const firm = {
   bookingUrl: "/start",
 };
 export const hero = {
-  badge: "For small teams already using Microsoft 365",
-  h1: "The connector for how your work actually runs.",
-  subline: "The systems, workflows, and AI that blend it all together — synced, smoothed, and understood — so your tools finally work as one and your people get their hours back.",
+  badge: "For small teams and the tools they already run",
+  h1: "Where all the moving parts finally move as one.",
+  subline: "The systems, workflows, and AI that blend your tools into one — so your people get their hours back.",
   mechanism: "We examine seven workflow points — intake, handoffs, approvals, documents, communication, reporting, and follow-up — and connect only what the work requires.",
-  without: "Without replacing your team, abandoning Microsoft 365, or buying another sprawling platform.",
+  without: "Without replacing your team, or bolting on another sprawling platform.",
   lede: [
     "Most teams run on a pile of disconnected tools and manual handoffs. The work leaks out between the apps, and \"adopt AI\" usually means one more thing that doesn't talk to the rest.",
     "Fretwork is the connector: we blend your processes, workflows, and AI into one system that syncs and runs — built around how your people already work, with a human sign-off on everything that ships.",
