@@ -49,7 +49,7 @@ const year = new Date().getFullYear();
   <footer class="site">
     <div class="wrap">
       <p class="sig">{firm.legalName.toUpperCase()}</p>
-      <p class="meta">{footerLine} &middot; <a href={`mailto:${firm.email}`}>{firm.email}</a> &middot; &copy; {year}</p>
+      <p class="meta">{footerLine} &middot; <a href="tel:+18888332510">(888)&nbsp;833-2510</a> &middot; &copy; {year}</p>
       <p class="backlink">A member of the <a href="https://www.vaulthuman.com">Vault Human</a> family of companies.</p>
     </div>
   </footer>
@@ -58,7 +58,9 @@ const year = new Date().getFullYear();
     .pagehead h1{margin:14px 0 18px;}
     .eyebrow{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:3px;text-transform:uppercase;}
     .dek{max-width:680px;margin:0 auto;font-family:var(--serif);font-size:clamp(17px,2vw,20px);line-height:1.5;}
-    .formwrap{background:#0D0D0D;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:26px 22px;margin:10px 0 20px;min-height:360px;box-shadow:0 20px 40px rgba(0,0,0,.55);}
+    .formwrap{background:#f7f5f0;color:#14161c;border:1px solid #e4ded3;border-radius:14px;padding:26px 22px;margin:10px auto 20px;max-width:560px;min-height:360px;box-shadow:0 20px 40px rgba(0,0,0,.28);}
+    .formwrap :is(label,legend,p,span,h1,h2,h3){color:#14161c !important}
+    .formwrap :is(input,textarea,select){color:#14161c !important;background:#fff !important;border:1px solid #c9c4bb !important}
     .note{max-width:680px;margin:12px auto 60px;text-align:center;opacity:.8;font-size:14px;}
   </style>
 </body>

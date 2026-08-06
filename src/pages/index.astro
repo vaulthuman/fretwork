@@ -25,7 +25,7 @@ const year = new Date().getFullYear();
   <header class="site">
     <div class="wrap bar">
       <a class="brand" href="/">{firm.wordmark}</a>
-      <a class="navbtn" href={firm.bookingUrl}>Start a conversation</a>
+      <a class="navbtn" href="#" data-open-form>Start a conversation</a>
     </div>
   </header>
   <main>
@@ -38,7 +38,7 @@ const year = new Date().getFullYear();
       <div class="lede">{hero.lede.map((p) => <p>{p}</p>)}</div>
       <p class="mech">{hero.mechanism}</p>
       <p class="without">{hero.without}</p>
-      <div class="cta"><a class="btn-fill" href={firm.bookingUrl}>{hero.cta}</a></div>
+      <div class="cta"><a class="btn-fill" href="#" data-open-form>{hero.cta}</a></div>
 
       <hr class="rule" />
       <section class="cols">{pillars.map((c) => (<div><h3>{c.title}</h3><p>{c.body}</p></div>))}</section>
@@ -53,7 +53,7 @@ const year = new Date().getFullYear();
       <hr class="rule" />
       <h2 class="sec">Why {firm.name}</h2>
       <div class="coachcard">
-        <img src="/russ-bw.jpg" alt="Russ Michaels, principal" width="96" height="120" />
+        <img src="/russ-bw.jpg" alt="Russ Michaels, principal" width="120" height="150" />
         <div><p class="coachname">Russ Michaels</p><p class="coachrole">Principal &middot; Fretwork Systems</p></div>
       </div>
       <div class="prose">{why.map((p) => <p>{p}</p>)}</div>
@@ -64,24 +64,43 @@ const year = new Date().getFullYear();
 
       <hr class="rule" />
       <p class="closing">{closing}</p>
-      <div class="ctarow" id="start"><a class="btn-fill" href="/start">{hero.cta}</a></div>
+      <div class="ctarow" id="start"><a class="btn-fill" href="#" data-open-form>{hero.cta}</a></div>
     </div>
   </main>
   <footer class="site">
     <div class="wrap">
       <p class="sig">{firm.legalName.toUpperCase()}</p>
-      <p class="meta">{footerLine} &middot; <a href={`mailto:${firm.email}`}>{firm.email}</a> &middot; &copy; {year}</p>
+      <p class="meta">{footerLine} &middot; <a href="tel:+18888332510">(888)&nbsp;833-2510</a> &middot; &copy; {year}</p>
       <p class="backlink">A member of the <a href="https://www.vaulthuman.com">Vault Human</a> family of companies.</p>
     </div>
   </footer>
   <style>
     .mech{max-width:820px;margin:26px auto 0;text-align:center;font-family:var(--serif);font-size:clamp(17px,2vw,20px);line-height:1.5;opacity:.95}
     .without{max-width:720px;margin:14px auto 0;text-align:center;font-size:14px;letter-spacing:.02em;opacity:.72}
-    .coachcard{display:flex;align-items:center;gap:16px;margin:0 0 22px}
-    .coachcard img{width:96px;height:120px;object-fit:cover;border-radius:10px;flex:0 0 auto;filter:grayscale(1)}
+    .coachcard{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;margin:0 auto 22px}
+    .coachcard img{width:120px;height:150px;object-fit:cover;border-radius:12px;filter:grayscale(1)}
     .coachname{font-weight:600;margin:0}
     .coachrole{opacity:.7;margin:2px 0 0;font-size:14px}
   </style>
+
+  <!-- Start-a-conversation modal -->
+  <div id="vh-modal" class="vh-modal" aria-hidden="true">
+    <div class="vh-modal__bg" data-close-form></div>
+    <div class="vh-modal__card" role="dialog" aria-modal="true" aria-label="Start a conversation">
+      <button class="vh-modal__x" type="button" data-close-form aria-label="Close">&times;</button>
+      <h2 class="vh-modal__title">Start a conversation</h2>
+      <p class="vh-modal__sub">Tell us one workflow that&rsquo;s costing your team time &mdash; we&rsquo;ll take it from there.</p>
+      <div class="hs-form-frame" data-region="na2" data-form-id="3f225ab5-5a70-46d9-a497-29e6256b1e52" data-portal-id="246947446"></div>
+    </div>
+  </div>
+  <script is:inline src="https://js-na2.hsforms.net/forms/embed/246947446.js" defer></script>
+  <script is:inline>
+  (function(){var m=document.getElementById('vh-modal');if(!m)return;
+  function o(e){if(e)e.preventDefault();m.classList.add('is-open');m.setAttribute('aria-hidden','false');document.documentElement.style.overflow='hidden';}
+  function c(){m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.documentElement.style.overflow='';}
+  document.addEventListener('click',function(e){var t=e.target.closest('[data-open-form]');if(t){o(e);return;}if(e.target.closest('[data-close-form]'))c();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')c();});})();
+  </script>
 <script>
 addEventListener('DOMContentLoaded',function(){
  if(!('IntersectionObserver'in window))return;
