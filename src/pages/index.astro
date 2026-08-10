@@ -109,12 +109,24 @@
   @media(max-width:720px){.ladder{grid-template-columns:1fr}}
 
   /* founder */
-  .founder{display:grid;grid-template-columns:200px 1fr;gap:34px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:34px}
-  .founder img{width:168px;height:196px;object-fit:cover;object-position:50% 20%;border-radius:10px;filter:grayscale(.15)}
+  .founder{display:grid;grid-template-columns:340px 1fr;gap:34px;align-items:start;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:34px}
+  .founder img{width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;border-radius:10px}
   .founder h3{font-size:1.4rem;margin-bottom:10px;font-family:'Space Grotesk'}
   .founder p{color:var(--muted);font-size:.96rem;margin-bottom:10px;max-width:60ch}
   .founder .role{font-family:'JetBrains Mono';font-size:.74rem;color:var(--accent);margin-bottom:14px}
   @media(max-width:640px){.founder{grid-template-columns:1fr;text-align:center}.founder img{margin:0 auto}}
+  /* start-a-conversation modal (mirrors Vault Human hub) */
+  .vh-modal{position:fixed;inset:0;z-index:2147483000;display:none}
+  .vh-modal.is-open{display:block}
+  .vh-modal__bg{position:absolute;inset:0;background:rgba(0,0,0,.74)}
+  .vh-modal__card{position:relative;width:min(520px,92vw);margin:6.5vh auto;background:#f7f5f0;color:#14161c;border-radius:14px;padding:34px 30px 26px;max-height:86vh;overflow:auto;box-shadow:0 30px 90px rgba(0,0,0,.55);font-family:Inter,system-ui,sans-serif}
+  .vh-modal__x{position:absolute;top:8px;right:14px;background:none;border:0;font-size:30px;line-height:1;color:#8a8a8a;cursor:pointer;padding:2px 8px}
+  .vh-modal__x:hover{color:#14161c}
+  .vh-modal__title{margin:0 0 6px;font-family:Fraunces,Georgia,serif;font-weight:400;font-size:26px;color:#14161c}
+  .vh-modal__sub{margin:0 0 18px;color:#565656;font-size:15px;line-height:1.45}
+  .vh-modal .hs-form-frame label,.vh-modal .hs-form-frame legend,.vh-modal .hs-form-frame p,.vh-modal .hs-form-frame span,.vh-modal .hs-form-frame h1,.vh-modal .hs-form-frame h2,.vh-modal .hs-form-frame h3{color:#14161c !important}
+  .vh-modal .hs-form-frame input,.vh-modal .hs-form-frame textarea,.vh-modal .hs-form-frame select{color:#14161c !important;background:#fff !important;border:1px solid #c9c4bb !important}
+  @media(max-width:560px){.vh-modal__card{width:100vw;min-height:100vh;margin:0;border-radius:0}}
 
   /* national band */
   .national{text-align:center;padding:56px 0;background:linear-gradient(180deg,var(--bg),var(--panel))}
@@ -161,7 +173,7 @@
     <a href="#build">What We Build</a>
     <a href="#method">Method</a>
     <a href="#pricing">Pricing</a>
-    <a href="#book" class="btn btn-primary" style="padding:10px 20px">Book a Diagnostic</a>
+    <a href="#book" class="btn btn-primary" style="padding:10px 20px" data-open-form>Book a Diagnostic</a>
   </nav>
 </div></header>
 
@@ -172,7 +184,7 @@
     <h1>Where all the moving parts finally <em>move as one.</em></h1>
     <p class="lede">We connect the tools, workflows, and AI your team already runs into one system that syncs and works &mdash; so your people get their hours back. Human sign-off on everything that ships.</p>
     <div class="hero-cta">
-      <a href="#book" class="btn btn-primary">Book your AI Systems Diagnostic</a>
+      <a href="#book" class="btn btn-primary" data-open-form>Book your AI Systems Diagnostic</a>
       <a href="#method" class="btn btn-ghost">See how it works</a>
     </div>
     <div class="hero-sig">// no rip-and-replace · no year-long engagement · built around how your people already work</div>
@@ -305,12 +317,29 @@
       <p style="max-width:34ch">AI and workflow systems that lean teams actually ship and use. Connected, not bolted on.</p>
       <p style="margin-top:14px" class="endorse">// Part of Vault Human</p>
     </div>
-    <div><h5>Navigate</h5><ul><li><a href="#build">What We Build</a></li><li><a href="#method">Method</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#book">Book a Diagnostic</a></li></ul></div>
+    <div><h5>Navigate</h5><ul><li><a href="#build">What We Build</a></li><li><a href="#method">Method</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#book" data-open-form>Book a Diagnostic</a></li></ul></div>
     <div><h5>Contact</h5><ul><li><a href="tel:+18888332510">(888) 833-2510</a></li><li>Remote · U.S.-wide</li><li>All time zones</li></ul></div>
   </div>
   <div class="legal">&copy; 2026 Fretwork Systems. Part of Vault Human. Human sign-off on everything we ship.</div>
 </div></footer>
 
+<!-- Start-a-conversation modal (mirrors Vault Human hub) -->
+<div id="vh-modal" class="vh-modal" aria-hidden="true">
+  <div class="vh-modal__bg" data-close-form></div>
+  <div class="vh-modal__card" role="dialog" aria-modal="true" aria-label="Book a diagnostic">
+    <button class="vh-modal__x" type="button" data-close-form aria-label="Close">&times;</button>
+    <h2 class="vh-modal__title">Book a diagnostic</h2>
+    <p class="vh-modal__sub">Tell us where the busywork lives and we&rsquo;ll be in touch to map it. No pressure.</p>
+    <div class="hs-form-frame" data-region="na2" data-form-id="3f225ab5-5a70-46d9-a497-29e6256b1e52" data-portal-id="246947446"></div>
+  </div>
+</div>
+<script is:inline>
+(function(){var m=document.getElementById('vh-modal');if(!m)return;
+function o(e){if(e)e.preventDefault();m.classList.add('is-open');m.setAttribute('aria-hidden','false');document.documentElement.style.overflow='hidden';}
+function c(){m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.documentElement.style.overflow='';}
+document.addEventListener('click',function(e){var t=e.target.closest('[data-open-form]');if(t){o(e);return;}if(e.target.closest('[data-close-form]'))c();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')c();});})();
+</script>
 <script is:inline src="https://js-na2.hsforms.net/forms/embed/246947446.js" defer></script>
 </body>
 </html>
