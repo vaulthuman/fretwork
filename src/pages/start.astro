@@ -54,6 +54,8 @@ const year = new Date().getFullYear();
       <h2 class="sec">What happens next</h2>
       <ol class="steps">{steps.map((s) => (<li><span class="rn">{s.n}</span><b>{s.title}</b> {s.body}</li>))}</ol>
       <hr class="rule" />
+      <p class="pricenote"><b>Fixed scope, fixed price.</b> The audit is free. Build sprints are quoted in writing before any work begins &mdash; no retainers, no surprises.</p>
+      <p class="proofline">Built by Russ Michaels &mdash; twenty years running organizations, now connecting the tools lean teams already own. Every build is human-reviewed before hand-off.</p>
       <div class="formwrap">
         <script is:inline src="https://js-na2.hsforms.net/forms/embed/246947446.js" defer></script>
         <div class="hs-form-frame" data-region="na2" data-form-id="3f225ab5-5a70-46d9-a497-29e6256b1e52" data-portal-id="246947446"></div>
@@ -76,6 +78,8 @@ const year = new Date().getFullYear();
     .formwrap{background:#f7f5f0;color:#14161c;border:1px solid #e4ded3;border-radius:14px;padding:26px 22px;margin:10px auto 20px;max-width:560px;min-height:360px;box-shadow:0 20px 40px rgba(0,0,0,.28);}
     .formwrap :is(label,legend,p,span,h1,h2,h3){color:#14161c !important}
     .formwrap :is(input,textarea,select){color:#14161c !important;background:#fff !important;border:1px solid #c9c4bb !important}
+    .pricenote{max-width:680px;margin:16px auto 6px;text-align:center;font-size:16px}
+    .proofline{max-width:680px;margin:0 auto 18px;text-align:center;font-size:14px;opacity:.8}
     .note{max-width:680px;margin:12px auto 60px;text-align:center;opacity:.8;font-size:14px;}
   </style>
 </body>
