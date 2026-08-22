@@ -21,7 +21,7 @@ export const hero = {
 export const pillars = [
   { title: "Connected, not bolted-on", body: "We don't sell you a platform. We connect the tools and steps you already use, and remove the friction between them." },
   { title: "Built around people", body: "Automation that serves the humans doing the work — every build carries a human sign-off." },
-  { title: "Productized & fast", body: "A paid audit, then a build sprint. Clear scope, clear price, something working at the end — not a year-long engagement." },
+  { title: "Productized & fast", body: "A free audit, then a fixed-price build sprint. Clear scope, clear price, something working at the end — not a year-long engagement." },
 ];
 export const turn = "Anyone can bolt on an AI tool. The work is connecting how a team actually gets things done — blending the processes, workflows, and systems into one thing that runs.";
 export const audiences = ["Integrations","Automations","Workflows","Data & reporting","AI assistants","Ops & intake"];
@@ -31,7 +31,7 @@ export const why = [
 ];
 export const steps = [
   { n: "I", title: "Start a conversation.", body: "A quick call to see if there's real friction worth connecting." },
-  { n: "II", title: "A paid audit.", body: "We map how the work actually flows, and where the real friction lives." },
+  { n: "II", title: "A free audit.", body: "We map how the work actually flows, and where the real friction lives \u2014 no charge, no obligation." },
   { n: "III", title: "A build sprint, then it runs.", body: "We connect the specific tools and steps — human QA on everything — and hand it off working." },
 ];
 export const closing = "The goal was never to replace your people. It's to connect the work so the busywork lets go — and let them do what only they can.";
