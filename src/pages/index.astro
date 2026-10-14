@@ -32,17 +32,17 @@ const year = new Date().getFullYear();
   </div></header>
 
   <main>
-    <section class="hero hero-video"><video class="bgvid" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=60&auto=format&fit=crop"><source src="https://assets.mixkit.co/videos/22728/22728-720.mp4" type="video/mp4"></video><div class="veil"></div>
+    <section class="hero">
       <div class="wrap hero-grid"><div class="hero-copy">
         <div class="timeword"><span class="tw past on">Past</span><span class="tw present">Present</span><span class="tw future">Future</span></div>
         <h1>We fix how <em>your work runs.</em></h1>
         <p class="lede">Fretwork connects the tools, workflows and AI your team already uses into one system that actually works. Your framing doesn't have to be your foundation.</p>
         <div class="ctarow"><a class="btn btn-acc" href="#" data-open-form>Book a free 30-minute call</a><a class="btn btn-line" href="#how">How it works</a></div>
         <p class="welcome" hidden>Welcome to Fretwork · The past · <b>Learn</b> from how things were built</p>
-      </div></div>
+      </div><div class="hero-photo"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&q=72&auto=format&fit=crop" alt="A small team working together at laptops" width="1400" height="1000" fetchpriority="high" /></div></div>
       <div class="proof"><div class="wrap proof-grid"><div><b>30</b><span>Days to a working system</span></div><div><b>0</b><span>New tools to buy</span></div><div><b>1</b><span>Human signs off on everything</span></div><div><b>M365</b><span>Microsoft 365 and Power Automate</span></div></div></div>
     </section>
-
+    <section class="sec gallery-sec faces"><div class="wrap gallery"><figure><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1000&q=72&auto=format&fit=crop" alt="A team mapping a process on a whiteboard" loading="lazy" /><figcaption>The map</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1000&q=72&auto=format&fit=crop" alt="Two colleagues reviewing a dashboard" loading="lazy" /><figcaption>The fix</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1000&q=72&auto=format&fit=crop" alt="A team walking through a plan together" loading="lazy" /><figcaption>The handoff</figcaption></figure></div></section>
     <section class="sec" id="why"><div class="wrap">
       <div class="sec-head"><p class="eyebrow">The problem</p><h2>Your team is the glue<br>between tools that don't talk.</h2></div>
       <div class="pains"><div class="pain"><h3>Inherited</h3><p>You run on tools and habits someone else set up.</p></div><div class="pain"><h3>Disconnected</h3><p>Nothing talks to anything. People copy and paste all day.</p></div><div class="pain"><h3>Unmapped</h3><p>Nobody has written down how the work actually flows.</p></div></div>
@@ -78,7 +78,7 @@ const year = new Date().getFullYear();
       <div class="faq"><details><summary>What does Fretwork do?</summary><p>Fixes how your work runs: connects your tools, automates busywork, and hands it to your team.</p></details><details><summary>Do you replace our tools?</summary><p>No. We connect the ones you have.</p></details><details><summary>What is Vault Human?</summary><p>Daily coaching, run by the same owner. Fretwork is the systems side; it is not coaching.</p></details><details><summary>Why 'the past'?</summary><p>Because every system you run today was built in the past. We start there.</p></details></div>
     </div></section>
 
-    <section class="sec final vid-sec" id="begin"><video class="bgvid" autoplay muted loop playsinline><source src="https://assets.mixkit.co/videos/47818/47818-720.mp4" type="video/mp4"></video><div class="veil"></div><div class="wrap">
+    <section class="sec final" id="begin"><div class="wrap">
       <h2>See what we see.</h2><p class="lede">A free 30-minute call. We tell you what is broken and what it would cost.</p>
       <div class="ctarow"><a class="btn btn-acc" href="#" data-open-form>Book a free 30-minute call</a><a class="btn btn-line" href="tel:+18888332510">(888) 833-2510</a></div>
     </div></section>
@@ -125,6 +125,5 @@ const year = new Date().getFullYear();
   document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<=0)pop();});
   if(matchMedia('(max-width:760px)').matches)setTimeout(pop,45000);})();
   </script>
-  <script is:inline>document.querySelectorAll("video.bgvid").forEach(function(v){v.playbackRate=0.6;v.addEventListener("loadedmetadata",function(){v.playbackRate=0.6;});});</script>
 </body>
 </html>
