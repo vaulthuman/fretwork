@@ -1,6 +1,6 @@
 ---
-import '../styles/global.css';
-import { firm, steps, footerLine } from '../data/site.js';
+import '../styles/family.css';
+import '../styles/tokens.css';
 const year = new Date().getFullYear();
 ---
 <!doctype html>
@@ -8,85 +8,63 @@ const year = new Date().getFullYear();
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Start — Fretwork</title>
-  <meta name="description" content="Start with a free conversation. Describe one workflow that's costing your team time and we'll tell you honestly whether a scoped audit is worth it. No obligation." />
-  <link rel="canonical" href="https://www.fretworksystems.com/start" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Fretwork Systems" />
-  <meta property="og:title" content="Start — Fretwork Systems" />
-  <meta property="og:description" content="Start with a free conversation about the workflow that's costing your team time. No obligation." />
-  <meta property="og:image" content="https://www.fretworksystems.com/og-fretwork.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://www.fretworksystems.com/start" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Start — Fretwork Systems" />
-  <meta name="twitter:description" content="Start with a free conversation. No obligation." />
-  <meta name="twitter:image" content="https://www.fretworksystems.com/og-fretwork.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <!-- Google Ads gtag (AW-18371546487) -->
+  <title>Start — Fretwork Systems</title>
+<link rel="canonical" href="https://www.fretworksystems.com/start">
+<meta name="description" content="Start with a free 30-minute call. Tell us the one workflow costing your team the most time, and we tell you what is broken and what it would cost.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Fretwork Systems"><meta property="og:title" content="Start — Fretwork Systems"><meta property="og:description" content="Start with a free 30-minute call. Tell us the one workflow costing your team the most time, and we tell you what is broken and what it would cost."><meta property="og:image" content="https://www.fretworksystems.com/og-fretwork.png"><meta property="og:url" content="https://www.fretworksystems.com/start">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Start — Fretwork Systems"><meta name="twitter:description" content="Start with a free 30-minute call. Tell us the one workflow costing your team the most time, and we tell you what is broken and what it would cost."><meta name="twitter:image" content="https://www.fretworksystems.com/og-fretwork.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Ads gtag (AW-18371546487) + HubSpot conversion listener -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18371546487"></script>
   <script>
     window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};var gtag=window.gtag;
-    gtag('js',new Date());gtag('config','AW-18371546487');gtag('config','G-B2NDY58EKD',{linker:{domains:['vaulthuman.com','tercetlaw.com','fretworksystems.com','triplicityadvisory.com','csh-vault.com']}});
+    gtag('js',new Date());gtag('config','AW-18371546487');gtag('config','G-B2NDY58EKD',{linker:{domains:['vaulthuman.com','tercetlaw.com','fretworksystems.com','triplicityadvisory.com']}});
     (function(){var fired=false;function fire(){if(fired)return;fired=true;gtag('event','conversion',{send_to:'AW-18371546487/r4eECOKGw9wcEPeanrhE'});gtag('event','generate_lead');}
     window.addEventListener('message',function(e){var d=e&&e.data;if(!d)return;if(typeof d==='string'){try{d=JSON.parse(d);}catch(_){return;}}if(!d||typeof d!=='object')return;var t=d.type||d.messageType||'',n=d.eventName||d.event||'';if(t==='hsFormCallback'&&(n==='onFormSubmitted'||n==='onFormSubmit'))fire();else if(n==='onFormSubmitted')fire();else if(d.accepted===true&&d.formGuid)fire();});
     window.addEventListener('hsFormCallback',function(e){if(e&&e.detail&&e.detail.eventName==='onFormSubmitted')fire();});})();
   </script>
 </head>
-<body>
-  <header class="site">
-    <div class="wrap bar">
-      <a class="brand" href="/">{firm.wordmark}</a>
-      <a class="navbtn" href="/">Back to site</a>
-    </div>
-  </header>
+<body data-time="past">
+  <header class="site"><div class="wrap bar">
+    <a class="brand" href="/">Fret<b>work</b></a>
+    <nav class="navlinks" id="navlinks"><a href="/#how">How it works</a><a href="/#what">What we do</a><a href="/#pricing">Pricing</a><a href="/start">Start</a><a class="btn btn-acc" href="#book">Book a call</a></nav><button class="navtoggle" type="button" aria-label="Open menu" aria-controls="navlinks" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div></header>
+
   <main>
-    <div class="wrap">
-      <div class="pagehead">
-        <p class="eyebrow">Start with a free conversation</p>
-        <h1>Start with a free conversation.</h1>
-        <p class="dek">Describe one workflow that&rsquo;s costing your team time. We&rsquo;ll talk it through personally, at no charge, and tell you honestly whether a scoped audit is worth it. No obligation.</p>
-      </div>
-      <hr class="rule" />
-      <h2 class="sec">What happens next</h2>
-      <ol class="steps">{steps.map((s) => (<li><span class="rn">{s.n}</span><b>{s.title}</b> {s.body}</li>))}</ol>
-      <hr class="rule" />
-      <p class="pricenote"><b>Fixed scope, fixed price.</b> The first conversation is free. The Systems Review is $1,500. The Rebuild starts at $7,500 and is quoted in writing, at one fixed price, before any work begins. Ongoing support from $750 a month, optional.</p>
-      <p class="proofline">Built by Russ Michaels &mdash; twenty years running organizations, now connecting the tools lean teams already own. Every build is human-reviewed before hand-off.</p>
-      <div class="formwrap">
-        <script is:inline src="https://js-na2.hsforms.net/forms/embed/246947446.js" defer></script>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/vaulthuman/free-call?hide_gdpr_banner=1&hide_landing_page_details=1" style="min-width:300px;height:640px;border-radius:10px;overflow:hidden;background:#fff"></div><p style="margin:12px 0 0;font-size:14px;opacity:.8;text-align:center">Rather talk now? <a href="tel:+18888332510">(888) 833-2510</a></p><script is:inline src="https://assets.calendly.com/assets/external/widget.js" async></script><style is:inline>.vh-modal__card{width:min(820px,94vw)!important}</style>
-      </div>
-      <p class="note">Share one workflow that&rsquo;s slowing your team down and we&rsquo;ll reply personally &mdash; usually within one business day. A real person holds it from here.</p>
-    </div>
+    <section class="hero"><img class="bgimg" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1800&q=72&auto=format&fit=crop" alt="A team mapping a process on a whiteboard" fetchpriority="high" /><div class="veil"></div>
+      <div class="wrap"><div class="hero-copy">
+        <p class="eyebrow">Start here</p>
+        <h1>Start with a free call. <em>Bring one workflow.</em></h1>
+        <p class="lede">Tell us the one thing costing your team the most time. In 30 minutes we map how it flows today, tell you what is broken, and what it would cost to fix. No obligation.</p>
+        <div class="ctarow"><a class="btn btn-acc" href="#book">Pick a time</a></div>
+      </div></div>
+    </section>
+
+    <section class="sec alt" id="how"><div class="wrap">
+      <div class="sec-head"><p class="eyebrow">What happens next</p><h2>Three steps.</h2></div>
+      <div class="steps"><div class="step"><div class="n">01</div><h3>Look</h3><p>A 30-minute call. We map how your work flows today.</p></div><div class="step"><div class="n">02</div><h3>Fix</h3><p>A fixed price. We connect your tools and automate the busywork.</p></div><div class="step"><div class="n">03</div><h3>Hand off</h3><p>Your team runs it. We stay on only if you want us to.</p></div></div>
+      <p class="offers-note">The first call is free. The Systems Review is $1,500. The Rebuild starts at $7,500 and is quoted in writing, at one fixed price, before any work begins. Keeping it running starts at $750 a month, optional.</p>
+    </div></section>
+
+    <section class="sec" id="book"><div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Book a free call</p><h2>Pick a time that suits you.</h2><p class="lede">You'll get a calendar invite with the video link.</p></div>
+      <div class="bookbox"><div class="calendly-inline-widget" data-url="https://calendly.com/vaulthuman/free-call?hide_gdpr_banner=1&hide_landing_page_details=1" style="min-width:300px;height:700px"></div></div>
+      <script is:inline src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div></section>
   </main>
-<section class="vh-anchor" style="max-width:680px;margin:56px auto 18px;padding:28px 26px;border:1px solid rgba(139,146,153,.28);border-radius:14px;text-align:center;font-family:Inter,system-ui,sans-serif">
-  <p style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#c9a96e;margin:0 0 10px">A Vault Human practice &middot; why we exist</p>
-  <p style="font-family:Georgia,serif;font-weight:300;font-size:18px;line-height:1.6;margin:0 0 10px">&ldquo;Seven people. Seven clean domains. One life, moving through all of them. From the outside, it looks like support. From the inside, it feels like drift.&rdquo;</p>
-  <p style="font-size:14px;line-height:1.6;opacity:.8;margin:0 0 16px">The industry fragments because the providers are fragmented &mdash; not because the human is. This practice is one part of a single relationship built to hold a whole life.</p>
-  <a href="https://www.vaulthuman.com/writing/the-fracture" style="color:#c9a96e;text-decoration:underline;font-weight:500">Read &ldquo;The Fracture&rdquo; &mdash; the essay Vault Human was built on &rarr;</a>
-</section>
+
   <footer class="site">
-    <div class="wrap">
-      <p class="sig">{firm.legalName.toUpperCase()}</p>
-      <p class="meta">{footerLine} &middot; <a href="tel:+18888332510">(888)&nbsp;833-2510</a> &middot; &copy; {year}</p>
-      <p class="backlink">A member of the <a href="https://www.vaulthuman.com">Vault Human</a> family of companies.</p>
+    <div class="wrap foot">
+      <div><a class="brand" href="/">Fret<b>work</b></a><p>We modernize how your work runs.</p><p><a href="mailto:vault@vaulthuman.com">vault@vaulthuman.com</a> · <a href="tel:+18888332510">(888) 833-2510</a></p></div>
+      <ul><li><a href="/#how">How it works</a></li><li><a href="/#what">What we do</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/start">Start</a></li><li><a href="https://www.linkedin.com/in/russ-michaels/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
+      <ul><li><a href="https://www.vaulthuman.com">Vault Human</a> — Listen</li><li><a href="https://www.fretworksystems.com">Fretwork</a> — Learn · the past</li><li><a href="https://triplicityadvisory.com">Triplicity</a> — Love · the present</li><li><a href="https://www.tercetlaw.com">Tercet Law</a> — Live · the future</li></ul>
     </div>
+    <div class="wrap legal"><span>&copy; {year} Fretwork Systems. Part of the Vault Human family.</span><span>Part of the Vault Human family</span></div>
   </footer>
-  <style>
-    .pagehead{padding:56px 0 8px;text-align:center;}
-    .pagehead h1{margin:14px 0 18px;}
-    .eyebrow{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:3px;text-transform:uppercase;}
-    .dek{max-width:680px;margin:0 auto;font-family:var(--serif);font-size:clamp(17px,2vw,20px);line-height:1.5;}
-    .formwrap{background:#f7f5f0;color:#14161c;border:1px solid #e4ded3;border-radius:14px;padding:26px 22px;margin:10px auto 20px;max-width:560px;min-height:360px;box-shadow:0 20px 40px rgba(0,0,0,.28);}
-    .formwrap :is(label,legend,p,span,h1,h2,h3){color:#14161c !important}
-    .formwrap :is(input,textarea,select){color:#14161c !important;background:#fff !important;border:1px solid #c9c4bb !important}
-    .pricenote{max-width:680px;margin:16px auto 6px;text-align:center;font-size:16px}
-    .proofline{max-width:680px;margin:0 auto 18px;text-align:center;font-size:14px;opacity:.8}
-    .note{max-width:680px;margin:12px auto 60px;text-align:center;opacity:.8;font-size:14px;}
-  </style>
+  <script is:inline>(function(){var b=document.querySelector(".navtoggle"),n=document.getElementById("navlinks");if(!b||!n)return;function set(o){document.body.classList.toggle("nav-open",o);b.setAttribute("aria-expanded",o?"true":"false");b.setAttribute("aria-label",o?"Close menu":"Open menu");}b.addEventListener("click",function(){set(!document.body.classList.contains("nav-open"));});n.addEventListener("click",function(e){if(e.target.closest("a"))set(false);});document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});})();</script>
+  <script is:inline>(function(){var h=document.querySelector("header.site");function f(){if(h)h.classList.toggle("scrolled",scrollY>40)}addEventListener("scroll",f,{passive:true});f();})();</script>
+  <script is:inline>addEventListener("DOMContentLoaded",function(){document.body.classList.add("ready");});</script>
+  <style is:inline>.bookbox{background:#fff;border-radius:14px;overflow:hidden;max-width:860px;box-shadow:0 20px 40px rgba(0,0,0,.18)}#how .offers-note{margin-top:28px}</style>
 </body>
 </html>
