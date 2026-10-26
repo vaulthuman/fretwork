@@ -28,7 +28,7 @@ const year = new Date().getFullYear();
 <body data-time="past">
   <header class="site"><div class="wrap bar">
     <a class="brand" href="/">Fret<b>work</b></a>
-    <nav class="navlinks" id="navlinks"><a href="/#how">How it works</a><a href="/#what">What we do</a><a href="/#pricing">Pricing</a><a href="/start">Start</a><a class="btn btn-acc" href="#book">Book a call</a></nav><button class="navtoggle" type="button" aria-label="Open menu" aria-controls="navlinks" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="navlinks" id="navlinks"><a href="/#how">How it works</a><a href="/#what">What we do</a><a href="/#pricing">Pricing</a><a href="/start">Start</a><a class="btn btn-acc" href="#book">Start a conversation</a></nav><button class="navtoggle" type="button" aria-label="Open menu" aria-controls="navlinks" aria-expanded="false"><span></span><span></span><span></span></button>
   </div></header>
 
   <main>
@@ -48,23 +48,7 @@ const year = new Date().getFullYear();
     </div></section>
 
     <section class="sec" id="book"><div class="wrap">
-      <div class="sec-head"><p class="eyebrow">Book a free call</p><h2>Pick a time that suits you.</h2><p class="lede">You'll get a calendar invite with the video link.</p></div>
-      <div class="bookbox"><div class="calendly-inline-widget" data-url="https://calendly.com/vaulthuman/free-call?hide_gdpr_banner=1&hide_landing_page_details=1" style="min-width:300px;height:700px"></div></div>
-      <script is:inline src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    </div></section>
-  </main>
-
-  <footer class="site">
-    <div class="wrap foot">
-      <div><a class="brand" href="/">Fret<b>work</b></a><p>We modernize how your work runs.</p><p><a href="mailto:vault@vaulthuman.com">vault@vaulthuman.com</a> · <a href="tel:+18888332510">(888) 833-2510</a></p></div>
-      <ul><li><a href="/#how">How it works</a></li><li><a href="/#what">What we do</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/start">Start</a></li><li><a href="https://www.linkedin.com/in/russ-michaels/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
-      <ul><li><a href="https://www.vaulthuman.com">Vault Human</a> — Listen</li><li><a href="https://www.fretworksystems.com">Fretwork</a> — Learn · the past</li><li><a href="https://triplicityadvisory.com">Triplicity</a> — Love · the present</li><li><a href="https://www.tercetlaw.com">Tercet Law</a> — Live · the future</li></ul>
-    </div>
-    <div class="wrap legal"><span>&copy; {year} Fretwork Systems. Part of the Vault Human family.</span><span>Part of the Vault Human family</span></div>
-  </footer>
-  <script is:inline>(function(){var b=document.querySelector(".navtoggle"),n=document.getElementById("navlinks");if(!b||!n)return;function set(o){document.body.classList.toggle("nav-open",o);b.setAttribute("aria-expanded",o?"true":"false");b.setAttribute("aria-label",o?"Close menu":"Open menu");}b.addEventListener("click",function(){set(!document.body.classList.contains("nav-open"));});n.addEventListener("click",function(e){if(e.target.closest("a"))set(false);});document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});})();</script>
-  <script is:inline>(function(){var h=document.querySelector("header.site");function f(){if(h)h.classList.toggle("scrolled",scrollY>40)}addEventListener("scroll",f,{passive:true});f();})();</script>
-  <script is:inline>addEventListener("DOMContentLoaded",function(){document.body.classList.add("ready");});</script>
-  <style is:inline>.bookbox{background:#fff;border-radius:14px;overflow:hidden;max-width:860px;box-shadow:0 20px 40px rgba(0,0,0,.18)}#how .offers-note{margin-top:28px}</style>
+      <div class="sec-head"><p class="eyebrow">Start a conversation</p><h2>Pick a time that suits you.</h2><p class="lede">You'll get a calendar invite with the video link.</p></div>
+      <div class="bookbox"><div class="contact-panel" style="padding:28px 26px;border:1px solid rgba(139,146,153,.35);border-radius:12px;text-align:left"><p style="margin:0 0 6px;font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.75">Call</p><p style="margin:0 0 18px;font-size:1.15rem;font-weight:600"><a href="tel:+18888332510">(888) 833-2510</a></p><p style="margin:0;font-size:14px;opacity:.8">Call and ask for Russ. If he's with someone, leave a message and he'll call you back.</p></div>
 </body>
 </html>
